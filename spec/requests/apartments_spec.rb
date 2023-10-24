@@ -40,4 +40,40 @@ RSpec.describe "Apartments", type: :request do
       expect(response).to have_http_status(200)
     end
   end
+
+    # create API endpoint
+    describe "POST /create" do
+      # all attributes
+      it 'saves a valid entry into the database' do
+        # provide an apartment instance
+        apartment_params = {
+          apartment: {
+            street: '124 Conch St',
+            unit: 'A',
+            city: 'Bikini Bottom',
+            state: 'CA',
+            square_footage: 3000,
+            price: '4000',
+            bedrooms: 2,
+            bathrooms: 2,
+            pets: 'no',
+            image: 'https://images.unsplash.com/photo-1680842350641-d49b43d71025?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNwb25nZWJvYnxlbnwwfHwwfHx8MA%3D%3D',
+            user_id: user.id
+          }
+        }
+
+        # http request
+        post '/apartments', params: apartment_params
+  
+        # abstract the payload from the response that has the content that is requested
+        apartment = JSON.parse(response.body)
+  
+        p "apartment: ", apartment
+  
+        # make assertions about the payload
+        expect(apartment['state']).to eq 'CA'
+        # make assertions about the status code
+        expect(response).to have_http_status(200)
+      end
+    end
 end
