@@ -1,6 +1,21 @@
 # Apartment App Backend 
 
 ## Rails API Initial Configuration
+
+### Vocabulary
+- devise: a library in the Ruby on Rails framework that quickly adds user authentication with features like user registration, login, password reset, and etc.
+
+- authorization: a process that determines if a user permission to perform a specific action within an application or database.
+
+- authentication: a process that verifies the identity of a user, usually through a username and password.
+
+- user session: a temporary state that allows a user to interact with a web application. It starts when the user logs in and ends when they log out or after a period of inactivity.
+
+- JSON Web Token (JWT): a system used for authentication and authorization to allow data to be securely shared about a user between separate applications. A JWT consists of three parts: a header, a payload, and a signature. The header contains information about how the JWT is encoded. The payload contains information about the user. The signature is used to check if the JWT has been tampered with during transmission.
+
+- localStorage: a feature in web browsers that allows web applications to store small amounts of data on the user's computer like items in a shopping cart or JWTs on active user session.
+
+### Workflow
 **just making the initial commit on main branch**  
 1. Create empty github repo
   - create a team on github classroom  
@@ -62,3 +77,4 @@ to the Gemfile to allow our devise and jwt setup: rack-cors, devise, devise-jwt,
 21. Perform initial commit
 
 22. Ask for branch protection on main branch
+
