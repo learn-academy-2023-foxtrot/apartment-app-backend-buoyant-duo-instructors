@@ -78,3 +78,29 @@ to the Gemfile to allow our devise and jwt setup: rack-cors, devise, devise-jwt,
 
 22. Ask for branch protection on main branch
 
+
+# API Validations
+
+## API Endpoints (Read and Create Functionality)
+1. Stub API endpoints in app/controllers/apartments_controller.rb
+
+2. Create tests in request spec file in spec/requests/apartments_spec.rb
+  
+3. See it fail
+
+4. Add logic in the API endpoint to make the test pass
+
+5. See it pass
+
+## Models (Validations)
+1. Creates tests in model spec file
+
+2. See it fail
+
+3. Add validation helpers in the model file
+
+4. See it pass
+
+## API Endpoints (Validations - Create Functionality)
+5. Create tests in request spec file in spec/requests/apartments_spec.rb that are missing attributes
+
