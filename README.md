@@ -131,3 +131,6 @@ to the Gemfile to allow our devise and jwt setup: rack-cors, devise, devise-jwt,
     params.require(:apartment).permit(:street, :unit, :city, :state, :square_footage, :price, :bedrooms, :bathrooms, :pets, :image, :user_id)
   end
 ```
+
+## removing gitignore files from version control
+- $ `git rm -rf --cached coverage`
